@@ -1,5 +1,5 @@
 // function to generate markdown for README
-// use conditional statements to generate table of contents 
+// use conditional statements to generate table of contents depending on what information ahs been provided by the user
 function generateMarkdown(userResponses, userInfo) {
   
   let tableOfContents= '## Table of Contents' ;
@@ -26,7 +26,7 @@ function generateMarkdown(userResponses, userInfo) {
   ` * [License](#license)`};
   return `# ${data.title}
 
-  ${renderBadge(data.license)}
+  ${renderBadge(data.license)} 
   
   ## Abstract
   ${data.abstract}
@@ -51,7 +51,7 @@ function generateMarkdown(userResponses, userInfo) {
 
 `;
 }
- //Generate markdown content
+ //write conditional statements for license shields 
  const LicenseBadge = (response)  => 
  {
    if(response.license == "Apache 2.0 License")return"[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
