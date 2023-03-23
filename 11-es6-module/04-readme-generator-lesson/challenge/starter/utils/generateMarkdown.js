@@ -28,9 +28,8 @@ function generateMarkdown(userResponses) {
 
   if (userResponses.license !== '') { tableOfContents +=
   ` * [License](#license)`};
+
    //write conditional statements for license shields 
- 
-   
 //   const LicenseBadge = (response)  => 
 //  {
 //    if(response.license == "Apache 2.0 License")return"[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
