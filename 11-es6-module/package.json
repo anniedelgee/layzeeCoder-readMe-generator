@@ -1,0 +1,21 @@
+{
+  "name": "11-es6-module",
+  "version": "1.0.0",
+  "description": "this is a readMe generator. or atleast it will be",
+  "main": "index.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "layzeeCoder-readMe-generator"
+  },
+  "keywords": [
+    "readMe",
+    "generative",
+    "node",
+    "CLI"
+  ],
+  "author": "anniedelgee",
+  "license": "MIT"
+}
