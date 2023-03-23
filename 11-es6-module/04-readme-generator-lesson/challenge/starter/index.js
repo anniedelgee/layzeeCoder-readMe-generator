@@ -1,11 +1,10 @@
 
-//external packages 
+//define variables 
 const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
 const util= require('util');
-
-//internal packages
+const writeFileAsync = util.promisify(writeToFile);
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
@@ -71,7 +70,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Give instructions for how to contribute to your applciation',
+        message: 'Give instructions for how to contribute to your application',
         name: 'contribution'
     },
     {
@@ -81,7 +80,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'GIve intructions for testing the programme/any tests written for it',
+        message: 'Give intructions for testing the programme/any tests written for it',
         name: 'tests'
     },
     {
@@ -94,20 +93,18 @@ const questions = [
 
 // function to write README file
 // write ternary oeprator for writing file or throwing error
-function writeToFile(fileName, data) {
-    fs.writeToFile(fileName, data);
+function writeToFile(fileName, userResponses) {
+    fs.writeToFile(fileName, userResponses);
     error ? console.log(err) : console.log("your newly generated readMe awaits!");
 
 }
-
-const writeFileAsync = util.promisify(writeToFile);
 
 // function to initialize program
 //use inquirer prompt function 
 init= () => {
     inquirer.prompt(questions)
-    .then((answers) => {
-        const newReadMe = generateMarkdown(answers)
+    .then((userResponses) => {
+        const newReadMe = generateMarkdown(userResponses)
     })
 
 }
