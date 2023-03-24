@@ -1,24 +1,24 @@
-# as
+# readme Generator
 
   
   ## Abstract
-  as
+  This project utilises node js to build an application that allows users to generate a read me dynamically.
 
   ## Installation
   undefined
 
   ## Usage
-  as
+  When building a web application there is usually limited time for writing documentation to accopany it, which doesnt mean that documentation is jsut as important as the project itself. this application can be used for streamlining the process  and makign sure you dont miss a step
 
   ## Contribution
-  as
+  contributions are welcome! simply make an issue in the repo and submit a pull request with a corresponding title to the issue.
 
   ## Credits
-  as
+  n/a
 
   ## Tests
-  as
+  n/a
 
   ## License
-  as
+  MIT
 
