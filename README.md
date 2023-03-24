@@ -6,7 +6,10 @@ A good readMe file goes a long way in getting the code community interested in y
 ## Application Demo
 
 ![gif of demo of readme generator]("layzeeCoder-readMe-generator/starter/Untitled_ Mar 24, 2023 4_34 PM.gif");
+
+becasue teh wuality of read me suffereed in export--> 
 ![screenshot of readme being generated]("layzeeCoder-readMe-generator/starter/Screenshot 2023-03-24 at 16.40.47.png")
+
 ![screenshot of generated readme]("layzeeCoder-readMe-generator/starter/Screenshot 2023-03-24 at 16.40.56.png")
 
 ## Usage
