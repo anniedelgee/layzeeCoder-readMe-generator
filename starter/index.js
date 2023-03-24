@@ -1,10 +1,9 @@
-
 //define variables 
 const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
 const util= require('util');
-const writeFileAsync = util.promisify(writeToFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
@@ -93,24 +92,18 @@ const questions = [
 
 // function to write README file
 // write ternary oeprator for writing file or throwing error
-function writeToFile(fileName, userResponses) {
-    fs.writeToFile(fileName, userResponses);
-    error ? console.log(err) : console.log("your newly generated readMe awaits!");
 
-}
 
 // function to initialize program
 //use inquirer prompt function 
 init= () => {
     inquirer.prompt(questions)
     .then((userResponses) => {
-        const newReadMe = generateMarkdown(userResponses)
+        let newReadMe = generateMarkdown(userResponses)
+        writeFileAsync('readme.md', newReadMe);
     })
 
 }
 
 // function call to initialize program
 init();
-
-
-
