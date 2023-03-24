@@ -91,9 +91,6 @@ const questions = [
 ];
 
 // function to write README file
-// write ternary oeprator for writing file or throwing error
-
-
 // function to initialize program
 //use inquirer prompt function 
 init= () => {
